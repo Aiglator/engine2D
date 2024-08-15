@@ -1,4 +1,5 @@
 import tkinter as tk
+from back.save import save_file
 
 def navbar(root):
     menubar = tk.Menu(root)
@@ -7,7 +8,7 @@ def navbar(root):
     file_menu = tk.Menu(menubar, tearoff=0)
     file_menu.add_command(label="New", command=lambda: print("New"))
     file_menu.add_command(label="Open", command=lambda: print("Open"))
-    file_menu.add_command(label="Save", command=lambda: print("Save"))
+    file_menu.add_command(label="Save", command=save_file )
     file_menu.add_command(label="Exit",command=root.quit)    
     # Ajouter le menu Fichier à la barre de menu
     menubar.add_cascade(label="File", menu=file_menu)
